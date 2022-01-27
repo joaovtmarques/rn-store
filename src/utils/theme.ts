@@ -1,15 +1,39 @@
-export const theme = {
-  colors: {
-    primary: '#1A1A1A',
-    secondary: '#262626',
+import {Dimensions} from 'react-native';
 
-    white: '#FFFFFF',
+const {height, width} = Dimensions.get('window');
 
-    green: '#36AC68',
-  },
+export const colors = {
+  labelBlack5: 'rgba(18, 18, 29, 0.05)',
+  labelBlack10: 'rgba(18, 18, 29, 0.1)',
+  labelBlack30: 'rgba(18, 18, 29, 0.3)',
+  labelBlack60: 'rgba(18, 18, 29, 0.6)',
+  labelBlack100: 'rgba(18, 18, 29, 1)',
 
-  // fonts: {
-  //   text: 'SF Pro Text Regular',
-  //   regular: 'SFProDisplay-Regular',
-  // },
+  labelWhite5: 'rgba(255, 255, 255, 0.05)',
+  labelWhite10: 'rgba(255, 255, 255, 0.1)',
+  labelWhite30: 'rgba(255, 255, 255, 0.3)',
+  labelWhite60: 'rgba(255, 255, 255, 0.6)',
+  labelWhite100: 'rgba(255, 255, 255, 1)',
+
+  keyRed: '#FF2343',
+  keyGreen: '#42D70D',
+  keyBlue: '#0008C7',
+};
+
+export const sizes = {
+  // global sizes
+  font16: '1rem',
+  font24: '1.5rem',
+  font48: '3rem',
+
+  // app dimensions
+  width,
+  height,
+};
+
+export const fonts = {
+  textBold: 'SFProDisplay-Bold',
+  textRegular: 'SFProDisplay-Regular',
+  textBold2: 'Poppins-Bold',
+  textBoldItalic: 'Poppins-BoldItalic',
 };
