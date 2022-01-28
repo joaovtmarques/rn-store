@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {View, Text} from 'react-native';
 
 import {styles} from './styles';
-import {colors} from '../../utils';
+import {colors, fonts} from '../../utils';
 import {globalStyles} from '../../utils/styles/global.styles';
 
 import Line from '../../components/Line';
@@ -52,7 +52,15 @@ export default function SignUp() {
             style={globalStyles.input}
             placeholderTextColor={colors.labelBlack30}
             textInputStyle={
-              mail ? globalStyles.textInputStyle2 : globalStyles.textInputStyle
+              mail
+                ? globalStyles.textInputStyle
+                : [
+                    globalStyles.textInputStyle,
+                    {
+                      fontFamily: fonts.textRegular,
+                      color: colors.labelBlack30,
+                    },
+                  ]
             }
             value={mail}
             onChangeText={(t: string) => setMail(t)}
@@ -64,7 +72,15 @@ export default function SignUp() {
             style={globalStyles.input}
             placeholderTextColor={colors.labelBlack30}
             textInputStyle={
-              name ? globalStyles.textInputStyle2 : globalStyles.textInputStyle
+              name
+                ? globalStyles.textInputStyle
+                : [
+                    globalStyles.textInputStyle,
+                    {
+                      fontFamily: fonts.textRegular,
+                      color: colors.labelBlack30,
+                    },
+                  ]
             }
             value={name}
             onChangeText={(t: string) => setName(t)}
@@ -77,8 +93,14 @@ export default function SignUp() {
             placeholderTextColor={colors.labelBlack30}
             textInputStyle={
               password
-                ? globalStyles.textInputStyle2
-                : globalStyles.textInputStyle
+                ? globalStyles.textInputStyle
+                : [
+                    globalStyles.textInputStyle,
+                    {
+                      fontFamily: fonts.textRegular,
+                      color: colors.labelBlack30,
+                    },
+                  ]
             }
             secure
             value={password}
@@ -103,14 +125,20 @@ export default function SignUp() {
         <View style={styles.signUpButtonContainer}>
           <SignUpAndInButton
             styleButton={
-              mail && name && password && checked
+              mail && password && checked
                 ? styles.signUpAndInButton
-                : styles.signUpAndInButton2
+                : [
+                    styles.signUpAndInButton,
+                    {backgroundColor: colors.labelWhite100},
+                  ]
             }
             styleText={
-              mail && name && password && checked
+              mail && password && checked
                 ? styles.textButton
-                : styles.textButton2
+                : [
+                    styles.textButton,
+                    {color: colors.labelBlack60, marginRight: 0},
+                  ]
             }
             title="Sign Up"
             visible={mail && name && password && checked ? true : false}
