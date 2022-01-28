@@ -102,9 +102,19 @@ export default function SignUp() {
         </View>
         <View style={styles.signUpButtonContainer}>
           <SignUpAndInButton
-            styleButton={styles.signUpAndInButton}
-            styleText={styles.textButton}
+            styleButton={
+              mail && name && password && checked
+                ? styles.signUpAndInButton
+                : styles.signUpAndInButton2
+            }
+            styleText={
+              mail && name && password && checked
+                ? styles.textButton
+                : styles.textButton2
+            }
             title="Sign Up"
+            visible={mail && name && password && checked ? true : false}
+            disabled={mail && name && password && checked ? false : true}
           />
         </View>
       </View>
