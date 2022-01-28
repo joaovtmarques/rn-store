@@ -12,20 +12,21 @@ export const styles = EStyleSheet.create({
     paddingHorizontal: '$pHorizontal',
   },
   topContentContainer: {},
-  textBuy: {
+  text16Bold: {
     fontSize: sizes.font16,
     color: colors.labelWhite30,
     fontFamily: fonts.textBold,
   },
-  textStore: {
+  text48Bold: {
     fontSize: sizes.font48,
     color: colors.labelWhite100,
     fontFamily: fonts.textBoldItalic,
   },
-  textRealTime: {
+  text24: {
     fontSize: sizes.font24,
     color: colors.labelWhite100,
     fontFamily: fonts.textBold2,
+    lineHeight: '2rem',
   },
   bottomContentContainer: {
     width: '100%',

@@ -22,8 +22,11 @@ export const colors = {
 
 export const sizes = {
   // global sizes
+  font11: '0.688rem',
+  font12: '0.75rem',
   font16: '1rem',
   font24: '1.5rem',
+  font28: '1.75.rem',
   font48: '3rem',
 
   // app dimensions

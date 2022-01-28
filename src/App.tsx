@@ -3,6 +3,7 @@ import {SafeAreaView} from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
 import Splash from './screens/Splash';
+import SignUp from './screens/SignUp';
 
 EStyleSheet.build({
   $pVertical: '4rem',
@@ -12,7 +13,7 @@ EStyleSheet.build({
 export default function App() {
   return (
     <SafeAreaView>
-      <Splash />
+      <SignUp />
     </SafeAreaView>
   );
 }
