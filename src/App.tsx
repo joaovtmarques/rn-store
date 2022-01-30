@@ -5,6 +5,7 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 // import Splash from './screens/Splash';
 import SignUp from './screens/SignUp';
 import SignIn from './screens/SignIn';
+import ForgotPassword from './screens/ForgotPassword';
 
 EStyleSheet.build({
   $pBottom: '1.25rem',
@@ -15,7 +16,7 @@ EStyleSheet.build({
 export default function App() {
   return (
     <SafeAreaView>
-      <SignUp />
+      <ForgotPassword />
     </SafeAreaView>
   );
 }

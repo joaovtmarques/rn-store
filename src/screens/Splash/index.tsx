@@ -8,7 +8,7 @@ import {colors} from '../../utils';
 
 import background from '../../assets/bg.png';
 
-import Button from '../../components/Button';
+import Button from '../../components/SplashButton';
 
 export default function Splash() {
   return (

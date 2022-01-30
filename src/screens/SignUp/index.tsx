@@ -16,7 +16,7 @@ import Name from '../../assets/icons/IC/24/user.svg';
 import Password from '../../assets/icons/IC/24/password.svg';
 import Apple from '../../assets/icons/IC/social/logoApple.svg';
 import Twitter from '../../assets/icons/IC/social/logoTwitter.svg';
-import SignUpAndInButton from '../../components/SignUpAndInButton';
+import SignUpAndInButton from '../../components/Button';
 import Facebook from '../../assets/icons/IC/social/logoFacebook.svg';
 
 export default function SignUp() {

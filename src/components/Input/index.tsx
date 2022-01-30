@@ -3,8 +3,8 @@ import {TextInput, View} from 'react-native';
 
 type IInput = {
   style: object;
-  Icon: any;
-  iconStyle: object;
+  Icon?: any;
+  iconStyle?: object;
   textInputStyle: object;
   placeholder: string;
   placeholderTextColor: string;

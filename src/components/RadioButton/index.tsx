@@ -7,7 +7,7 @@ type IRadioButton = {
   visible: boolean;
 };
 
-import Icon from '../assets/icons/IC/24/checkOn.svg';
+import Icon from '../../assets/icons/IC/24/checkOn.svg';
 
 export default function RadioButton({onPress, style, visible}: IRadioButton) {
   return (
