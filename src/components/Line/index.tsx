@@ -1,10 +1,7 @@
 import React from 'react';
 import {View} from 'react-native';
+import {styles} from './styles';
 
-type ILine = {
-  style: object;
-};
-
-export default function Line({style}: ILine) {
-  return <View style={style} />;
+export default function Line() {
+  return <View style={styles.line} />;
 }

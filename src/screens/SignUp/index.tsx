@@ -2,13 +2,14 @@ import React, {useState} from 'react';
 import {View, Text} from 'react-native';
 
 import {styles} from './styles';
-import {colors, fonts} from '../../utils';
+import {colors} from '../../utils';
 import {globalStyles} from '../../utils/styles/global.styles';
 
 import Line from '../../components/Line';
 import Input from '../../components/Input';
 import CloseButton from '../../components/CloseButton';
 import RadioButton from '../../components/RadioButton';
+import SignUpAndInButton from '../../components/Button';
 import SocialMediaButton from '../../components/SocialMediaButton';
 
 import Mail from '../../assets/icons/IC/24/mail.svg';
@@ -16,7 +17,6 @@ import Name from '../../assets/icons/IC/24/user.svg';
 import Password from '../../assets/icons/IC/24/password.svg';
 import Apple from '../../assets/icons/IC/social/logoApple.svg';
 import Twitter from '../../assets/icons/IC/social/logoTwitter.svg';
-import SignUpAndInButton from '../../components/Button';
 import Facebook from '../../assets/icons/IC/social/logoFacebook.svg';
 
 export default function SignUp() {
@@ -33,77 +33,38 @@ export default function SignUp() {
     <View
       style={[{backgroundColor: colors.labelWhite100}, globalStyles.container]}>
       <View style={styles.content}>
-        <CloseButton style={styles.button} />
+        <CloseButton />
         <View style={styles.topTextContainer}>
           <Text style={globalStyles.text28Bold}>Let’s Get Started!</Text>
           <Text>Sign up with Social of fill the form to continue.</Text>
         </View>
         <View style={styles.socialMediaContainer}>
-          <SocialMediaButton style={styles.socialMediaButton} Icon={Twitter} />
-          <SocialMediaButton style={styles.socialMediaButton} Icon={Facebook} />
-          <SocialMediaButton style={styles.socialMediaButton} Icon={Apple} />
+          <SocialMediaButton Icon={Twitter} />
+          <SocialMediaButton Icon={Facebook} />
+          <SocialMediaButton Icon={Apple} />
         </View>
-        <Line style={globalStyles.line} />
+        <Line />
         <View style={styles.inputsContainer}>
           <Input
             Icon={Mail}
-            iconStyle={globalStyles.iconStyle}
-            placeholder="Email"
-            style={globalStyles.input}
-            placeholderTextColor={colors.labelBlack30}
-            textInputStyle={
-              mail
-                ? globalStyles.textInputStyle
-                : [
-                    globalStyles.textInputStyle,
-                    {
-                      fontFamily: fonts.textRegular,
-                      color: colors.labelBlack30,
-                    },
-                  ]
-            }
             value={mail}
+            placeholder="Email"
+            content={mail ? true : false}
             onChangeText={(t: string) => setMail(t)}
           />
           <Input
             Icon={Name}
-            iconStyle={globalStyles.iconStyle}
-            placeholder="Name"
-            style={globalStyles.input}
-            placeholderTextColor={colors.labelBlack30}
-            textInputStyle={
-              name
-                ? globalStyles.textInputStyle
-                : [
-                    globalStyles.textInputStyle,
-                    {
-                      fontFamily: fonts.textRegular,
-                      color: colors.labelBlack30,
-                    },
-                  ]
-            }
             value={name}
+            placeholder="Name"
+            content={name ? true : false}
             onChangeText={(t: string) => setName(t)}
           />
           <Input
-            Icon={Password}
-            iconStyle={globalStyles.iconStyle}
-            placeholder="Password"
-            style={globalStyles.input}
-            placeholderTextColor={colors.labelBlack30}
-            textInputStyle={
-              password
-                ? globalStyles.textInputStyle
-                : [
-                    globalStyles.textInputStyle,
-                    {
-                      fontFamily: fonts.textRegular,
-                      color: colors.labelBlack30,
-                    },
-                  ]
-            }
             secure
+            Icon={Password}
             value={password}
+            placeholder="Password"
+            content={password ? true : false}
             onChangeText={(t: string) => setPassword(t)}
           />
         </View>
@@ -122,27 +83,12 @@ export default function SignUp() {
             <Text style={styles.termsTextBlack}>Privacy Policy</Text>
           </Text>
         </View>
-        <View style={styles.signUpButtonContainer}>
+        <View style={styles.buttonContainer}>
           <SignUpAndInButton
-            styleButton={
-              mail && password && checked
-                ? styles.signUpAndInButton
-                : [
-                    styles.signUpAndInButton,
-                    {backgroundColor: colors.labelWhite100},
-                  ]
-            }
-            styleText={
-              mail && password && checked
-                ? styles.textButton
-                : [
-                    styles.textButton,
-                    {color: colors.labelBlack60, marginRight: 0},
-                  ]
-            }
             title="Sign Up"
             visible={mail && name && password && checked ? true : false}
             disabled={mail && name && password && checked ? false : true}
+            content={mail && name && password && checked ? true : false}
           />
         </View>
       </View>

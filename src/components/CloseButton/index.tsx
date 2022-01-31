@@ -1,15 +1,13 @@
 import React from 'react';
 import {TouchableOpacity} from 'react-native';
 
+import {styles} from './styles';
+
 import CloseIcon from '../../assets/icons/IC/24/close.svg';
 
-type IButton = {
-  style: object;
-};
-
-export default function CloseButton({style}: IButton) {
+export default function CloseButton() {
   return (
-    <TouchableOpacity style={style}>
+    <TouchableOpacity style={styles.button}>
       <CloseIcon />
     </TouchableOpacity>
   );

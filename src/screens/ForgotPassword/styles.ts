@@ -1,6 +1,5 @@
 import EStyleSheet from 'react-native-extended-stylesheet';
 import {colors, fonts, sizes} from '../../utils';
-import {globalStyles} from '../../utils/styles/global.styles';
 
 export const styles = EStyleSheet.create({
   content: {
@@ -39,6 +38,7 @@ export const styles = EStyleSheet.create({
   },
   input: {
     flex: 1,
+    fontSize: sizes.font16,
     fontFamily: fonts.textRegular,
     color: colors.labelBlack30,
     paddingLeft: '0.625rem',
@@ -46,5 +46,10 @@ export const styles = EStyleSheet.create({
   buttonContainer: {
     alignItems: 'center',
     marginTop: '4.563rem',
+  },
+  callingCodeText: {
+    fontFamily: fonts.textBold,
+    fontSize: sizes.font16,
+    color: colors.labelBlack100,
   },
 });

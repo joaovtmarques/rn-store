@@ -1,14 +1,14 @@
 import React from 'react';
 import {TouchableOpacity} from 'react-native';
+import {styles} from './styles';
 
 type IButton = {
-  style: object;
   Icon: any;
 };
 
-export default function SocialMediaButton({style, Icon}: IButton) {
+export default function SocialMediaButton({Icon}: IButton) {
   return (
-    <TouchableOpacity style={style}>
+    <TouchableOpacity style={styles.button}>
       <Icon />
     </TouchableOpacity>
   );

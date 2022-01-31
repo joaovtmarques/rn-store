@@ -1,36 +1,43 @@
 import React from 'react';
 import {TextInput, View} from 'react-native';
 
+import {styles} from './styles';
+import {colors, fonts} from '../../utils';
+
 type IInput = {
-  style: object;
   Icon?: any;
-  iconStyle?: object;
-  textInputStyle: object;
-  placeholder: string;
-  placeholderTextColor: string;
-  secure?: boolean;
   value: any;
+  secure?: boolean;
+  content: boolean;
   onChangeText: any;
+  placeholder: string;
 };
 
 export default function Input({
-  style,
   Icon,
-  iconStyle,
-  textInputStyle,
   placeholder,
-  placeholderTextColor,
   secure,
   value,
   onChangeText,
+  content,
 }: IInput) {
   return (
-    <View style={style}>
-      <Icon style={iconStyle} />
+    <View style={styles.input}>
+      <Icon style={styles.icon} />
       <TextInput
-        style={textInputStyle}
+        style={
+          content
+            ? styles.textInput
+            : [
+                styles.input,
+                {
+                  fontFamily: fonts.textRegular,
+                  color: colors.labelBlack30,
+                },
+              ]
+        }
         placeholder={placeholder}
-        placeholderTextColor={placeholderTextColor}
+        placeholderTextColor={colors.labelBlack30}
         secureTextEntry={secure}
         value={value}
         onChangeText={onChangeText}

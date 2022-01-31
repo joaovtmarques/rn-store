@@ -8,10 +8,11 @@ type IRadioButton = {
 };
 
 import Icon from '../../assets/icons/IC/24/checkOn.svg';
+import {styles} from './styles';
 
-export default function RadioButton({onPress, style, visible}: IRadioButton) {
+export default function RadioButton({onPress, visible}: IRadioButton) {
   return (
-    <TouchableOpacity onPress={onPress} style={style}>
+    <TouchableOpacity onPress={onPress} style={styles.radioButton}>
       {visible ? <Icon /> : null}
     </TouchableOpacity>
   );

@@ -25,18 +25,14 @@ export default function Splash() {
         </View>
         <View style={styles.bottomContentContainer}>
           <Button
-            button={styles.button}
-            text={styles.buttonText}
             textColor={colors.labelBlack100}
             title="Sign Up"
-            color={colors.labelWhite100}
+            backColor={colors.labelWhite100}
           />
           <Button
-            button={styles.button}
-            text={styles.buttonText}
             textColor={colors.labelWhite100}
             title="Sign In"
-            color={colors.labelBlack30}
+            backColor={colors.labelBlack30}
           />
         </View>
       </View>

@@ -1,24 +1,18 @@
 import React from 'react';
 import {TouchableOpacity, Text} from 'react-native';
 
+import {styles} from './styles';
+
 type IButton = {
   title: string;
-  color: string;
-  button: object;
-  text: object;
+  backColor: string;
   textColor: string;
 };
 
-export default function Button({
-  title,
-  button,
-  color,
-  text,
-  textColor,
-}: IButton) {
+export default function Button({title, backColor, textColor}: IButton) {
   return (
-    <TouchableOpacity style={[{backgroundColor: color}, button]}>
-      <Text style={[{color: textColor}, text]}>{title}</Text>
+    <TouchableOpacity style={[{backgroundColor: backColor}, styles.button]}>
+      <Text style={[{color: textColor}, styles.buttonText]}>{title}</Text>
     </TouchableOpacity>
   );
 }

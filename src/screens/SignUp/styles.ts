@@ -60,32 +60,8 @@ export const styles = EStyleSheet.create({
   termsTextBlack: {
     color: colors.labelBlack100,
   },
-  signUpButtonContainer: {
+  buttonContainer: {
     width: '100%',
     alignItems: 'center',
-  },
-  signUpAndInButton: {
-    width: '10rem',
-    height: '3.5rem',
-    borderRadius: '3.75rem',
-    backgroundColor: colors.keyBlue,
-    shadowColor: colors.labelBlack60,
-    shadowOffset: {
-      width: 0,
-      height: '0.25rem',
-    },
-    shadowOpacity: '0.019rem',
-    shadowRadius: '0.291rem',
-    elevation: '0.5rem',
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexDirection: 'row',
-  },
-  textButton: {
-    fontFamily: fonts.textBold,
-    fontSize: sizes.font16,
-    lineHeight: sizes.font24,
-    color: colors.labelWhite100,
-    marginRight: '0.813rem',
   },
 });

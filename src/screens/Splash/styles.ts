@@ -31,18 +31,6 @@ export const styles = EStyleSheet.create({
   bottomContentContainer: {
     width: '100%',
   },
-  button: {
-    height: '3.5rem',
-    width: '100%',
-    borderRadius: '3.75rem',
-    marginBottom: '0.625rem',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  buttonText: {
-    fontSize: sizes.font16,
-    fontFamily: fonts.textBold,
-  },
 });
 
 export const stylesBackground = {

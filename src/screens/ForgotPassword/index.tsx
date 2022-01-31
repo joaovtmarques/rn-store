@@ -45,7 +45,7 @@ export default function ForgotPassword() {
   return (
     <View style={globalStyles.container}>
       <View style={styles.content}>
-        <CloseButton style={styles.button} />
+        <CloseButton />
         <View style={styles.topTextContainer}>
           <Text style={globalStyles.text28Bold}>Forgot your password?</Text>
           <Text>
@@ -75,9 +75,7 @@ export default function ForgotPassword() {
               style={styles.arrowIcon}
             />
           </View>
-          <Text style={globalStyles.textInputStyle}>
-            +{country.callingCode}
-          </Text>
+          <Text style={styles.callingCodeText}>+{country.callingCode}</Text>
           <TextInput
             value={phoneNumber}
             onChangeText={t => setPhoneNumber(t)}
