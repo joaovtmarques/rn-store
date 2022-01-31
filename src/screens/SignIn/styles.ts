@@ -4,8 +4,8 @@ import {colors, fonts, sizes} from '../../utils';
 export const styles = EStyleSheet.create({
   content: {
     height: sizes.height,
-    paddingTop: '$pVertical',
-    paddingBottom: '$pBottom',
+    paddingTop: '$padding',
+    paddingBottom: '$padding',
     paddingHorizontal: '$pHorizontal',
     justifyContent: 'space-between',
   },
@@ -33,6 +33,5 @@ export const styles = EStyleSheet.create({
   },
   buttonContainer: {
     alignItems: 'center',
-    paddingBottom: '$pBottom',
   },
 });

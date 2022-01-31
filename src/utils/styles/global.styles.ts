@@ -3,7 +3,8 @@ import {colors, fonts, sizes} from '../../utils';
 
 export const globalStyles = EStyleSheet.create({
   container: {
-    flex: 1,
+    height: sizes.height,
+    width: sizes.width,
   },
   text11Regular: {
     fontSize: sizes.font11,

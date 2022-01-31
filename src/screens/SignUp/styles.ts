@@ -3,10 +3,11 @@ import {colors, fonts, sizes} from '../../utils';
 
 export const styles = EStyleSheet.create({
   content: {
-    height: sizes.height,
-    paddingTop: '$pVertical',
-    paddingBottom: '$pBottom',
+    flex: 1,
+    paddingTop: '$padding',
+    paddingBottom: '$padding',
     paddingHorizontal: '$pHorizontal',
+    justifyContent: 'space-between',
   },
   button: {
     height: '2.75rem',
@@ -38,11 +39,11 @@ export const styles = EStyleSheet.create({
     fontSize: sizes.font11,
     fontFamily: fonts.textRegular,
     color: colors.labelBlack30,
-    marginBottom: '6.125rem',
   },
   termsOfServiceContainer: {
     flexDirection: 'row',
     alignItems: 'flex-start',
+    marginBottom: '1.25rem',
   },
   radioButton: {
     width: sizes.font24,
@@ -64,4 +65,5 @@ export const styles = EStyleSheet.create({
     width: '100%',
     alignItems: 'center',
   },
+  termsOfServiceAndButtonStyle: {},
 });

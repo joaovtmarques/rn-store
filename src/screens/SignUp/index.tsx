@@ -33,63 +33,67 @@ export default function SignUp() {
     <View
       style={[{backgroundColor: colors.labelWhite100}, globalStyles.container]}>
       <View style={styles.content}>
-        <CloseButton />
-        <View style={styles.topTextContainer}>
-          <Text style={globalStyles.text28Bold}>Let’s Get Started!</Text>
-          <Text>Sign up with Social of fill the form to continue.</Text>
+        <View>
+          <CloseButton />
+          <View style={styles.topTextContainer}>
+            <Text style={globalStyles.text28Bold}>Let’s Get Started!</Text>
+            <Text>Sign up with Social of fill the form to continue.</Text>
+          </View>
+          <View style={styles.socialMediaContainer}>
+            <SocialMediaButton Icon={Twitter} />
+            <SocialMediaButton Icon={Facebook} />
+            <SocialMediaButton Icon={Apple} />
+          </View>
+          <Line />
+          <View style={styles.inputsContainer}>
+            <Input
+              Icon={Mail}
+              value={mail}
+              placeholder="Email"
+              content={mail ? true : false}
+              onChangeText={(t: string) => setMail(t)}
+            />
+            <Input
+              Icon={Name}
+              value={name}
+              placeholder="Name"
+              content={name ? true : false}
+              onChangeText={(t: string) => setName(t)}
+            />
+            <Input
+              secure
+              Icon={Password}
+              value={password}
+              placeholder="Password"
+              content={password ? true : false}
+              onChangeText={(t: string) => setPassword(t)}
+            />
+            <Text style={styles.text11Regular}>
+              At least 8 characters, 1 uppercase letter, 1 number, 1 symbol
+            </Text>
+          </View>
         </View>
-        <View style={styles.socialMediaContainer}>
-          <SocialMediaButton Icon={Twitter} />
-          <SocialMediaButton Icon={Facebook} />
-          <SocialMediaButton Icon={Apple} />
-        </View>
-        <Line />
-        <View style={styles.inputsContainer}>
-          <Input
-            Icon={Mail}
-            value={mail}
-            placeholder="Email"
-            content={mail ? true : false}
-            onChangeText={(t: string) => setMail(t)}
-          />
-          <Input
-            Icon={Name}
-            value={name}
-            placeholder="Name"
-            content={name ? true : false}
-            onChangeText={(t: string) => setName(t)}
-          />
-          <Input
-            secure
-            Icon={Password}
-            value={password}
-            placeholder="Password"
-            content={password ? true : false}
-            onChangeText={(t: string) => setPassword(t)}
-          />
-        </View>
-        <Text style={styles.text11Regular}>
-          At least 8 characters, 1 uppercase letter, 1 number, 1 symbol
-        </Text>
-        <View style={styles.termsOfServiceContainer}>
-          <RadioButton
-            onPress={handleCheckedButton}
-            style={styles.radioButton}
-            visible={checked}
-          />
-          <Text style={styles.termsText}>
-            By Signing up, you agree to the{' '}
-            <Text style={styles.termsTextBlack}>Terms of Service</Text> and{' '}
-            <Text style={styles.termsTextBlack}>Privacy Policy</Text>
-          </Text>
-        </View>
-        <View style={styles.buttonContainer}>
-          <SignUpAndInButton
-            title="Sign Up"
-            visible={mail && name && password && checked ? true : false}
-            disabled={mail && name && password && checked ? false : true}
-            content={mail && name && password && checked ? true : false}
-          />
+        <View style={styles.termsOfServiceAndButtonStyle}>
+          <View style={styles.termsOfServiceContainer}>
+            <RadioButton
+              onPress={handleCheckedButton}
+              style={styles.radioButton}
+              visible={checked}
+            />
+            <Text style={styles.termsText}>
+              By Signing up, you agree to the{' '}
+              <Text style={styles.termsTextBlack}>Terms of Service</Text> and{' '}
+              <Text style={styles.termsTextBlack}>Privacy Policy</Text>
+            </Text>
+          </View>
+          <View style={styles.buttonContainer}>
+            <SignUpAndInButton
+              title="Sign Up"
+              visible={mail && name && password && checked ? true : false}
+              disabled={mail && name && password && checked ? false : true}
+              content={mail && name && password && checked ? true : false}
+            />
+          </View>
         </View>
       </View>
     </View>

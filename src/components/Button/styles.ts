@@ -6,7 +6,7 @@ export const styles = EStyleSheet.create({
     heigth: '100%',
     width: '100%',
     alignItems: 'center',
-    paddingBottom: '$pBottom',
+    paddingBottom: '$padding',
   },
   button: {
     width: '10rem',

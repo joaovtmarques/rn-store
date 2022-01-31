@@ -7,12 +7,6 @@ import SignUp from './screens/SignUp';
 import SignIn from './screens/SignIn';
 import ForgotPassword from './screens/ForgotPassword';
 
-EStyleSheet.build({
-  $pBottom: '1.25rem',
-  $pVertical: '4rem',
-  $pHorizontal: '1.875rem',
-});
-
 export default function App() {
   return (
     <SafeAreaView>
