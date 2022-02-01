@@ -14,6 +14,18 @@ export const globalStyles = EStyleSheet.create({
     textAlign: 'right',
   },
   text12Regular: {
+    fontFamily: fonts.textRegular,
+    fontSize: sizes.font12,
+    lineHeight: sizes.font16,
+    color: colors.labelBlack100,
+  },
+  text12Regular60: {
+    fontFamily: fonts.textRegular,
+    fontSize: sizes.font12,
+    lineHeight: sizes.font16,
+    color: colors.labelBlack60,
+  },
+  text12Bold60: {
     fontFamily: fonts.textBold,
     fontSize: sizes.font12,
     lineHeight: sizes.font16,
@@ -23,6 +35,12 @@ export const globalStyles = EStyleSheet.create({
     fontFamily: fonts.textBold,
     fontSize: sizes.font16,
     lineHeight: sizes.font24,
+    color: colors.labelBlack100,
+  },
+  text20Bold: {
+    fontFamily: fonts.textBold,
+    fontSize: sizes.font20,
+    lineHeight: sizes.font28,
     color: colors.labelBlack100,
   },
   text28Bold: {

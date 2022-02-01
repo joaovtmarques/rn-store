@@ -48,7 +48,7 @@ export default function ForgotPassword() {
         <CloseButton />
         <View style={styles.topTextContainer}>
           <Text style={globalStyles.text28Bold}>Forgot your password?</Text>
-          <Text>
+          <Text style={globalStyles.text12Regular60}>
             {
               'If you need help resetting your password\nwe can help by sending you a link to reset it.'
             }

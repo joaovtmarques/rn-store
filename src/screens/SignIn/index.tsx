@@ -35,7 +35,7 @@ export default function SignIn() {
           <CloseButton />
           <View style={styles.topTextContainer}>
             <Text style={globalStyles.text28Bold}>Welcome</Text>
-            <Text>Sign in with Social of fill the form to continue.</Text>
+            <Text style={globalStyles.text12Regular60}>Sign in with Social of fill the form to continue.</Text>
           </View>
           <View style={styles.socialMediaContainer}>
             <SocialMediaButton Icon={Twitter} />

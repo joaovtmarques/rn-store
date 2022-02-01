@@ -37,7 +37,7 @@ export default function SignUp() {
           <CloseButton />
           <View style={styles.topTextContainer}>
             <Text style={globalStyles.text28Bold}>Let’s Get Started!</Text>
-            <Text>Sign up with Social of fill the form to continue.</Text>
+            <Text style={globalStyles.text12Regular60}>Sign up with Social of fill the form to continue.</Text>
           </View>
           <View style={styles.socialMediaContainer}>
             <SocialMediaButton Icon={Twitter} />
