@@ -1,16 +1,32 @@
 import React from 'react';
 import {SafeAreaView} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
 
-// import Splash from './screens/Splash';
-import SignUp from './screens/SignUp';
-import SignIn from './screens/SignIn';
-// import ForgotPassword from './screens/ForgotPassword';
-import PhoneVerification from './screens/PhoneVerification';
+import {RootStackParamList} from './navigation';
+
+import {MainStack} from './navigation';
+import EStyleSheet from 'react-native-extended-stylesheet';
+import {sizes} from './utils';
+
+declare global {
+  namespace ReactNavigation {
+    interface RootParamList extends RootStackParamList {}
+  }
+}
 
 export default function App() {
   return (
-    <SafeAreaView>
-      <PhoneVerification />
-    </SafeAreaView>
+    <NavigationContainer>
+      <SafeAreaView style={styles.container}>
+        <MainStack />
+      </SafeAreaView>
+    </NavigationContainer>
   );
 }
+
+const styles = EStyleSheet.create({
+  container: {
+    height: sizes.height,
+    width: sizes.width,
+  },
+});

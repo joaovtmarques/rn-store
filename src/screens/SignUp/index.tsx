@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import {View, Text} from 'react-native';
 
+import {Props} from '../../navigation';
+
 import {styles} from './styles';
 import {colors} from '../../utils';
 import {globalStyles} from '../../utils/styles/global.styles';
@@ -19,7 +21,7 @@ import Apple from '../../assets/icons/IC/social/logoApple.svg';
 import Twitter from '../../assets/icons/IC/social/logoTwitter.svg';
 import Facebook from '../../assets/icons/IC/social/logoFacebook.svg';
 
-export default function SignUp() {
+export default function SignUp({navigation}: Props) {
   const [mail, setMail] = useState('');
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
@@ -34,10 +36,12 @@ export default function SignUp() {
       style={[{backgroundColor: colors.labelWhite100}, globalStyles.container]}>
       <View style={styles.content}>
         <View>
-          <CloseButton />
+          <CloseButton onPress={() => navigation.goBack()} />
           <View style={styles.topTextContainer}>
             <Text style={globalStyles.text28Bold}>Let’s Get Started!</Text>
-            <Text style={globalStyles.text12Regular60}>Sign up with Social of fill the form to continue.</Text>
+            <Text style={globalStyles.text12Regular60}>
+              Sign up with Social of fill the form to continue.
+            </Text>
           </View>
           <View style={styles.socialMediaContainer}>
             <SocialMediaButton Icon={Twitter} />
@@ -88,6 +92,7 @@ export default function SignUp() {
           </View>
           <View style={styles.buttonContainer}>
             <SignUpAndInButton
+              onPress={() => navigation.navigate('MainTab')}
               title="Sign Up"
               visible={mail && name && password && checked ? true : false}
               disabled={mail && name && password && checked ? false : true}

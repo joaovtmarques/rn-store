@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 
+import {Props} from '../../navigation';
+
 import {styles} from './styles';
 import {colors} from '../../utils';
 import {globalStyles} from '../../utils/styles/global.styles';
@@ -18,7 +20,7 @@ import Apple from '../../assets/icons/IC/social/logoApple.svg';
 import Twitter from '../../assets/icons/IC/social/logoTwitter.svg';
 import Facebook from '../../assets/icons/IC/social/logoFacebook.svg';
 
-export default function SignIn() {
+export default function SignIn({navigation}: Props) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [checked, setChecked] = useState(false);
@@ -32,10 +34,12 @@ export default function SignIn() {
       style={[{backgroundColor: colors.labelWhite100}, globalStyles.container]}>
       <View style={styles.content}>
         <View>
-          <CloseButton />
+          <CloseButton onPress={() => navigation.goBack()} />
           <View style={styles.topTextContainer}>
             <Text style={globalStyles.text28Bold}>Welcome</Text>
-            <Text style={globalStyles.text12Regular60}>Sign in with Social of fill the form to continue.</Text>
+            <Text style={globalStyles.text12Regular60}>
+              Sign in with Social of fill the form to continue.
+            </Text>
           </View>
           <View style={styles.socialMediaContainer}>
             <SocialMediaButton Icon={Twitter} />
@@ -75,6 +79,7 @@ export default function SignIn() {
           </View>
           <View style={styles.buttonContainer}>
             <Button
+              onPress={() => navigation.navigate('MainTab')}
               title="Sign In"
               content={email && password && checked ? true : false}
               visible={email && password && checked ? true : false}

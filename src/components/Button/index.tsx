@@ -6,6 +6,7 @@ type IButton = {
   visible: boolean;
   disabled: boolean;
   content: boolean;
+  onPress: any;
 };
 
 import Icon from '../../assets/icons/IC/24/chevronRightWhite.svg';
@@ -17,9 +18,11 @@ export default function SignUpAndInButton({
   visible,
   disabled,
   content,
+  onPress,
 }: IButton) {
   return (
     <TouchableOpacity
+      onPress={onPress}
       disabled={disabled}
       style={
         content

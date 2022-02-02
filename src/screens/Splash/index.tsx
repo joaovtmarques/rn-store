@@ -1,4 +1,5 @@
 import React from 'react';
+import {useNavigation} from '@react-navigation/native';
 import {View, Text, ImageBackground} from 'react-native';
 
 import {styles, stylesBackground} from './styles';
@@ -11,6 +12,8 @@ import background from '../../assets/bg.png';
 import Button from '../../components/SplashButton';
 
 export default function Splash() {
+  const navigation = useNavigation();
+
   return (
     <View style={globalStyles.container}>
       <ImageBackground
@@ -25,11 +28,13 @@ export default function Splash() {
         </View>
         <View style={styles.bottomContentContainer}>
           <Button
+            onPress={() => navigation.navigate('SignUp')}
             textColor={colors.labelBlack100}
             title="Sign Up"
             backColor={colors.labelWhite100}
           />
           <Button
+            onPress={() => navigation.navigate('SignIn')}
             textColor={colors.labelWhite100}
             title="Sign In"
             backColor={colors.labelBlack30}

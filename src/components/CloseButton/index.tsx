@@ -5,9 +5,13 @@ import {styles} from './styles';
 
 import CloseIcon from '../../assets/icons/IC/24/close.svg';
 
-export default function CloseButton() {
+type ICloseButton = {
+  onPress: any;
+};
+
+export default function CloseButton({onPress}: ICloseButton) {
   return (
-    <TouchableOpacity style={styles.button}>
+    <TouchableOpacity onPress={onPress} style={styles.button}>
       <CloseIcon />
     </TouchableOpacity>
   );

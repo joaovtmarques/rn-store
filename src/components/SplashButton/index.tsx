@@ -7,11 +7,19 @@ type IButton = {
   title: string;
   backColor: string;
   textColor: string;
+  onPress?: any;
 };
 
-export default function Button({title, backColor, textColor}: IButton) {
+export default function Button({
+  title,
+  backColor,
+  textColor,
+  onPress,
+}: IButton) {
   return (
-    <TouchableOpacity style={[{backgroundColor: backColor}, styles.button]}>
+    <TouchableOpacity
+      onPress={onPress}
+      style={[{backgroundColor: backColor}, styles.button]}>
       <Text style={[{color: textColor}, styles.buttonText]}>{title}</Text>
     </TouchableOpacity>
   );
