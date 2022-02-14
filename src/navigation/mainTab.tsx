@@ -54,8 +54,8 @@ const TabButton = (props: any) => {
 
   useEffect(() => {
     if (focused) {
-      viewRef.current!.animate({0: {scale: 0}, 1: {scale: 1}})!;
-      textViewRef.current!.animate({0: {scale: 0}, 1: {scale: 1}})!;
+      viewRef.current.animate({0: {scale: 0}, 1: {scale: 1}});
+      textViewRef.current.animate({0: {scale: 0}, 1: {scale: 1}});
     } else {
       viewRef.current.animate({0: {scale: 1}, 1: {scale: 0}});
       textViewRef.current.animate({0: {scale: 1}, 1: {scale: 0}});
@@ -96,7 +96,7 @@ const TabButton = (props: any) => {
 
 export default function Tabs() {
   return (
-    <View style={styles.container}>
+    <>
       <Tab.Navigator
         screenOptions={{
           tabBarShowLabel: false,
@@ -104,7 +104,10 @@ export default function Tabs() {
           tabBarStyle: {
             borderTopWidth: 0,
             height: EStyleSheet.value('5rem'),
-            width: EStyleSheet.value('16rem'),
+            position: 'absolute',
+            bottom: EStyleSheet.value('$padding'),
+            right: EStyleSheet.value('4.125rem'),
+            left: EStyleSheet.value('4.125rem'),
             backgroundColor: colors.labelWhite100,
             borderRadius: EStyleSheet.value('3.75rem'),
             paddingTop: EStyleSheet.value('1rem'),
@@ -128,16 +131,11 @@ export default function Tabs() {
           );
         })}
       </Tab.Navigator>
-    </View>
+    </>
   );
 }
 
 const styles = EStyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    paddingBottom: '$padding',
-  },
   btnContainer: {
     justifyContent: 'center',
     alignItems: 'center',

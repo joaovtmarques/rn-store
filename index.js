@@ -6,7 +6,6 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 
 EStyleSheet.build({
   $padding: '2.625rem',
-  // $padding: '1.25rem',
   $pVertical: '4rem',
   $pHorizontal: '1.875rem',
 });

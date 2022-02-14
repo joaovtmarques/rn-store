@@ -2,6 +2,7 @@ import {StackNavigationProp} from '@react-navigation/stack';
 
 import MainStack from './mainStack';
 import MainTab from './mainTab';
+import TopTab from './topTab';
 
 export type RootStackParamList = {
   My: undefined;
@@ -22,4 +23,4 @@ export type Props = {
   navigation: ProfileScreenNavigationProp;
 };
 
-export {MainStack, MainTab};
+export {MainStack, MainTab, TopTab};

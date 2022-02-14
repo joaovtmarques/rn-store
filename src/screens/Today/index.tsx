@@ -1,15 +1,18 @@
 import React from 'react';
-import {View, Text} from 'react-native';
-import {globalStyles} from '../../utils/styles/global.styles';
+import {Text, View} from 'react-native';
 
-// import { Container } from './styles';
+import {TopTab} from '../../navigation';
+
+import {styles} from './styles';
+import {globalStyles} from '../../utils/styles/global.styles';
 
 export default function Today() {
   return (
-    <View style={globalStyles.container}>
+    <>
       <View>
-        <Text style={globalStyles.text28Bold}>Today</Text>
+        <Text>Today</Text>
       </View>
-    </View>
+      <TopTab />
+    </>
   );
 }
