@@ -24,6 +24,7 @@ export const sizes = {
   // global sizes
   font11: '0.688rem',
   font12: '0.75rem',
+  font14: '0.875rem',
   font16: '1rem',
   font20: '1.25rem',
   font24: '1.5rem',

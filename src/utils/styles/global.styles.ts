@@ -31,6 +31,17 @@ export const globalStyles = EStyleSheet.create({
     lineHeight: sizes.font16,
     color: colors.labelBlack60,
   },
+  text12Bold: {
+    fontFamily: fonts.textBold,
+    fontSize: sizes.font12,
+    lineHeight: sizes.font16,
+    color: colors.labelBlack100,
+  },
+  text14Bold: {
+    fontFamily: fonts.textBold,
+    fontSize: sizes.font14,
+    lineHeight: sizes.font16,
+  },
   text16Bold: {
     fontFamily: fonts.textBold,
     fontSize: sizes.font16,

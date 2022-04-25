@@ -2,9 +2,8 @@ import React from 'react';
 import {SafeAreaView} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 
-import {RootStackParamList} from './navigation';
+import {MainTab, MainStack, RootStackParamList} from './navigation';
 
-import {MainStack} from './navigation';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import {sizes} from './utils';
 
@@ -18,7 +17,8 @@ export default function App() {
   return (
     <NavigationContainer>
       <SafeAreaView style={styles.container}>
-        <MainStack />
+        {/* <MainStack /> */}
+        <MainTab />
       </SafeAreaView>
     </NavigationContainer>
   );

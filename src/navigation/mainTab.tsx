@@ -153,13 +153,14 @@ const styles = EStyleSheet.create({
     paddingHorizontal: '0.5rem',
   },
   shadow: {
-    shadowColor: colors.labelBlack10,
+    shadowColor: colors.labelBlack60,
     shadowOffset: {
       width: 0,
-      height: 2,
+      height: 12,
     },
-    shadowOpacity: 0.23,
-    shadowRadius: 2.62,
-    elevation: 4,
+    shadowOpacity: 1,
+    shadowRadius: 16.0,
+
+    elevation: 24,
   },
 });

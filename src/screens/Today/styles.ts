@@ -1,12 +1,16 @@
+import {colors} from './../../utils/theme';
 import EStyleSheet from 'react-native-extended-stylesheet';
-import {sizes} from '../../utils';
+import {globalStyles} from '../../utils/styles/global.styles';
 
 export const styles = EStyleSheet.create({
   content: {
     paddingTop: '2rem',
-    padding: '0.938rem',
+    paddingLeft: '1.875rem',
+    paddingBottom: '0.938rem',
+    backgroundColor: colors.labelWhite100,
   },
-  header: {
-    paddingHorizontal: '0.938rem',
+  title: {
+    ...globalStyles.text28Bold,
+    marginBottom: 0,
   },
 });

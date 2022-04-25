@@ -4,13 +4,12 @@ import {Text, View} from 'react-native';
 import {TopTab} from '../../navigation';
 
 import {styles} from './styles';
-import {globalStyles} from '../../utils/styles/global.styles';
 
 export default function Today() {
   return (
     <>
-      <View>
-        <Text>Today</Text>
+      <View style={styles.content}>
+        <Text style={styles.title}>Today</Text>
       </View>
       <TopTab />
     </>
