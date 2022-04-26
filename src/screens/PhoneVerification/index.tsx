@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {useNavigation} from '@react-navigation/native';
 import {Text, TouchableOpacity, View} from 'react-native';
 
 import {styles} from './styles';
@@ -8,6 +9,8 @@ import CodeInput from '../../components/CodeInput';
 import CloseButton from '../../components/CloseButton';
 
 export default function PhoneVerification() {
+  const navigation = useNavigation();
+
   const [code1, setCode1] = useState('');
   const [code2, setCode2] = useState('');
   const [code3, setCode3] = useState('');
@@ -16,7 +19,7 @@ export default function PhoneVerification() {
   return (
     <View style={globalStyles.container}>
       <View style={styles.content}>
-        <CloseButton />
+        <CloseButton onPress={() => navigation.goBack()} />
         <View style={styles.topTextContainer}>
           <Text style={globalStyles.text28Bold}>Phone Verification</Text>
           <Text style={globalStyles.text12Regular60}>

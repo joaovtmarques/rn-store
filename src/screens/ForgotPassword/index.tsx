@@ -1,11 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, {useState} from 'react';
 import {Text, TextInput, View} from 'react-native';
-import EStyleSheet from 'react-native-extended-stylesheet';
 import {
   CountryCode,
   Country,
 } from 'react-native-country-picker-modal/lib/types';
+import {useNavigation} from '@react-navigation/native';
+import EStyleSheet from 'react-native-extended-stylesheet';
 import CountryPicker from 'react-native-country-picker-modal';
 
 import {styles} from './styles';
@@ -18,6 +19,8 @@ import CloseButton from '../../components/CloseButton';
 import ArrowIcon from '../../assets/icons/IC/24/chevronDown.svg';
 
 export default function ForgotPassword() {
+  const navigation = useNavigation();
+
   const [phoneNumber, setPhoneNumber] = useState('');
 
   const [countryCode, setCountryCode] = useState<CountryCode>('US');
@@ -45,7 +48,7 @@ export default function ForgotPassword() {
   return (
     <View style={globalStyles.container}>
       <View style={styles.content}>
-        <CloseButton />
+        <CloseButton onPress={() => navigation.goBack()} />
         <View style={styles.topTextContainer}>
           <Text style={globalStyles.text28Bold}>Forgot your password?</Text>
           <Text style={globalStyles.text12Regular60}>
@@ -97,6 +100,7 @@ export default function ForgotPassword() {
         <View style={styles.buttonContainer}>
           <Button
             title="Next"
+            onPress={() => navigation.navigate('PhoneVerification')}
             content={phoneNumber.length >= 8 ? true : false}
             visible={phoneNumber.length >= 8 ? true : false}
             disabled={phoneNumber.length >= 8 ? false : true}

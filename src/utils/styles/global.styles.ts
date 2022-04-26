@@ -1,4 +1,5 @@
 import EStyleSheet from 'react-native-extended-stylesheet';
+
 import {colors, fonts, sizes} from '../../utils';
 
 export const globalStyles = EStyleSheet.create({
@@ -42,8 +43,19 @@ export const globalStyles = EStyleSheet.create({
     fontSize: sizes.font14,
     lineHeight: sizes.font16,
   },
+  text14Regular: {
+    fontFamily: fonts.textRegular,
+    fontSize: sizes.font14,
+    lineHeight: sizes.font28,
+  },
   text16Bold: {
     fontFamily: fonts.textBold,
+    fontSize: sizes.font16,
+    lineHeight: sizes.font24,
+    color: colors.labelBlack100,
+  },
+  text16Regular: {
+    fontFamily: fonts.textRegular,
     fontSize: sizes.font16,
     lineHeight: sizes.font24,
     color: colors.labelBlack100,

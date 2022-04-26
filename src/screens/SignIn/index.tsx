@@ -63,7 +63,9 @@ export default function SignIn({navigation}: Props) {
               content={password ? true : false}
               onChangeText={(t: string) => setPassword(t)}
             />
-            <TouchableOpacity style={styles.resetPassButton}>
+            <TouchableOpacity
+              onPress={() => navigation.navigate('ForgotPassword')}
+              style={styles.resetPassButton}>
               <Text style={globalStyles.text11Regular}>Reset password</Text>
             </TouchableOpacity>
           </View>

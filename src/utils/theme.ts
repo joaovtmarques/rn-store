@@ -30,6 +30,7 @@ export const sizes = {
   font24: '1.5rem',
   font28: '1.75.rem',
   font48: '3rem',
+  font56: '3.5rem',
 
   // app dimensions
   width,
